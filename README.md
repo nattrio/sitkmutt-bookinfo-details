@@ -18,7 +18,7 @@ ruby details.rb 8081
 # Build Docker Image for details service
 docker build -t details .
 
-# Run details service on port 8080
+# Run details service on port 8081
 docker run -d --name details -p 8081:8081 details
 ```
 
