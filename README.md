@@ -15,10 +15,10 @@ ruby details.rb 8081
 ## How to run with Docker
 
 ```bash
-# Build Docker Image for detail service
+# Build Docker Image for details service
 docker build -t details .
 
-# Run ratings service on port 8080
+# Run details service on port 8080
 docker run -d --name details -p 8081:8081 details
 ```
 
