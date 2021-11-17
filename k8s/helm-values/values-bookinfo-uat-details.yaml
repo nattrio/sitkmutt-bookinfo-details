@@ -1,0 +1,14 @@
+details:
+  namespace: student4-bookinfo-uat
+  replicas: 1
+  imagePullSecrets: registry-bookinfo
+  port: 8081
+  image: ghcr.io/nattrio/bookinfo-details
+  tag: uat
+ingress:
+  host: sitkmutt.bookinfo.uat.opsta.net
+  path: "/student4/details(/|$)(.*)"
+  serviceType: ClusterIP
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    nginx.ingress.kubernetes.io/rewrite-target: /$2
